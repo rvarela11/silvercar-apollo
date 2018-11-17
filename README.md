@@ -4,6 +4,6 @@
 
 I have included the following to the create-react-app 2:
 
-### Eslint Airbnb
-### Enzyme
-### Redux
+Eslint Airbnb
+Enzyme
+Redux
