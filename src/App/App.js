@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+// @components
+import Header from './components/Header/Header';
+
 // @actions
 import { getAllData } from './actions/index';
 
 // @styles
-import './style.css';
+import './App.scss';
 
 class App extends Component {
     componentDidMount() {
@@ -22,7 +25,7 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <p>Howdy!</p>
+                    <Header />
                 </header>
             </div>
         );

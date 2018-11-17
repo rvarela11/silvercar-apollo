@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 // @containers
-import App from './App';
+import App from './App/App';
 
 // @reducers
 import { reducer } from './App/reducers';
