@@ -1,12 +1,45 @@
-.root {
+@import '../../globals/scss/colors';
+@import '../../globals/scss/typography';
+
+.header {
     flex-grow: 1;
+
+    // Placing these material-ui classes inside the header class to override
+    .header__button:hover {
+      background-color: $color__white;
+      color: $color__sc-blue
+    }
+    .header__help-button {
+      color: $color__light-black;
+    }
+    .header__help-button:hover {
+      color: $color__light-red;
+    }
+    .MuiPaper-elevation4-16 {
+      border-bottom: 1px solid $color__light-gray;
+      box-shadow: none;
+    }
 }
 
-.grow {
+.header__logo {
+    background-image: url(https://s3.amazonaws.com/development-silvercar-static-assets/assets/web-assets/silvercar-by-audi.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     flex-grow: 1;
+    height: rem(25px);
+    margin: 0;
+    padding: 0;
+    width: rem(150px);
 }
 
-.menuButtom {
-    margin-left: -12;
-    margin-right: 20;
+.header__buttons {
+  border: 1px solid $color__light-black;
+  border-radius: rem(100px);
+  margin: 0 1rem;
+  padding: rem(10px);
+}
+
+.header__button:first-child {
+  border-radius: rem(0px);
+  border-right: 1px solid $color__black;
 }
