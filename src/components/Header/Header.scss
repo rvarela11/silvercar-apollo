@@ -6,7 +6,7 @@
 
     // Placing these material-ui classes inside the header class to override
     .header__button:hover {
-      background-color: $color__white;
+      background-color: transparent;
       color: $color__sc-blue
     }
     .header__help-button {
@@ -36,7 +36,7 @@
   border: 1px solid $color__light-black;
   border-radius: rem(100px);
   margin: 0 1rem;
-  padding: rem(10px);
+  padding: 0;
 }
 
 .header__button:first-child {
