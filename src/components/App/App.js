@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 // @components
-import Header from './components/Header/Header';
+import Header from '../Header/Header';
 
 // @actions
-import { getAllData } from './actions/index';
+import { getAllData } from '../../actions/index';
 
 // @styles
 import './App.scss';
@@ -24,9 +24,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <Header />
-                </header>
+                <Header />
             </div>
         );
     }
