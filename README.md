@@ -1,9 +1,5 @@
-# [Create React App 2](https://github.com/facebookincubator/create-react-app)
+# Silvercar
 
 ### About
 
-I have included the following to the create-react-app 2:
-
-* Eslint Airbnb
-* Enzyme
-* Redux
+A locations section where a user can find their location by city name.
