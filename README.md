@@ -9,7 +9,7 @@ A locations section where a user can find their location by city name.
 1. React
 2. Redux
 
-## Others
+### Others
 
 1. Eslint Airbnb
 2. Enzyme
