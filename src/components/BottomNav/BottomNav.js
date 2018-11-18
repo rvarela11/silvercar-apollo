@@ -1,5 +1,6 @@
 // @vendors
 import React from 'react';
+import PropTypes from 'prop-types';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
@@ -17,6 +18,7 @@ class BottomNav extends React.Component {
 
   render() {
       const { value } = this.state;
+      const { buttonNavLabels } = this.props;
       return (
           <BottomNavigation
               className="bottomNav"
@@ -24,14 +26,14 @@ class BottomNav extends React.Component {
               showLabels
               value={value}
           >
-              <BottomNavigationAction label="CITY" />
-              <BottomNavigationAction label="PICK UP" />
-              <BottomNavigationAction label="DROP OFF" />
-              <BottomNavigationAction label="VEHICLE" />
-              <BottomNavigationAction label="COVERAGE" />
+              { buttonNavLabels.map((label, index) => <BottomNavigationAction key={index} label={label} />) }
           </BottomNavigation>
       );
   }
 }
+
+BottomNav.propTypes = {
+    buttonNavLabels: PropTypes.array.isRequired
+};
 
 export default BottomNav;

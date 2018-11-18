@@ -1,6 +1,7 @@
 const initialState = {
     apiDataAll: [],
-    apiDataAllFiltered: []
+    apiDataAllFiltered: [],
+    bottomNavLabels: ['CITY', 'PICK UP', 'DROP OFF', 'VEHICLE', 'COVERAGE']
 };
 
 export function reducer(state = initialState, action) {
@@ -10,7 +11,8 @@ export function reducer(state = initialState, action) {
             return {
                 ...state,
                 apiDataAll: apiDataNoQ5NoA5C,
-                apiDataAllFiltered: apiDataNoQ5NoA5C
+                apiDataAllFiltered: apiDataNoQ5NoA5C,
+                bottomNavLabels: state.bottomNavLabels
             };
         case 'SEARCH_INPUT_VALUE':
             const lowerCaseValue = action.payload.toLowerCase();
