@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 // @components
 import Header from '../Header/Header';
+import Locations from '../Locations/Locations';
 
 // @actions
 import { getAllData } from '../../actions/index';
@@ -22,9 +23,11 @@ class App extends Component {
     }
 
     render() {
+        const { apiDataAllFiltered } = this.props;
         return (
             <div className="App">
                 <Header />
+                <Locations data={apiDataAllFiltered} />
             </div>
         );
     }
@@ -39,6 +42,7 @@ const mapStateToProps = state => ({
 });
 
 App.propTypes = {
+    apiDataAllFiltered: PropTypes.array.isRequired,
     getAllData: PropTypes.func.isRequired
 };
 
