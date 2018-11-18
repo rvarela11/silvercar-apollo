@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 // @components
 import Header from '../Header/Header';
 import Locations from '../Locations/Locations';
+import BottomNav from '../BottomNav/BottomNav';
 
 // @actions
 import { getAllData, searchInputValue } from '../../actions/index';
@@ -28,6 +29,7 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Locations data={apiDataAllFiltered} handleOnChangeSearch={value => searchInputValue(value)} />
+                <BottomNav />
             </div>
         );
     }

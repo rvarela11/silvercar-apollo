@@ -1,0 +1,10 @@
+// @styles
+@import '../../globals/scss/colors';
+
+.bottomNav {
+  // Placing these material-ui classes inside the header class to override
+  .MuiBottomNavigationAction-root-120.MuiBottomNavigationAction-selected-121,
+  .MuiBottomNavigationAction-selected-121 {
+    color: $color__sc-blue;
+  }
+}
