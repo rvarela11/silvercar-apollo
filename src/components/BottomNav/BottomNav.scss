@@ -2,6 +2,11 @@
 @import '../../globals/scss/colors';
 
 .bottomNav {
+  border-top: 1px solid $color__light-gray;
+  bottom:0;
+  position:fixed;
+  width: 100%;
+
   // Placing these material-ui classes inside the header class to override
   .MuiBottomNavigationAction-root-120.MuiBottomNavigationAction-selected-121,
   .MuiBottomNavigationAction-selected-121 {

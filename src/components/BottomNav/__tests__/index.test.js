@@ -7,6 +7,6 @@ import BottomNav from '../BottomNav';
 
 describe('BottomNav Container', () => {
     it('renders BottomNav without crashing', () => {
-        shallow(<BottomNav buttonNavLabels={[]} />);
+        shallow(<BottomNav bottomNavLabels={[]} />);
     });
 });

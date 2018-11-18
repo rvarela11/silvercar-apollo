@@ -18,7 +18,7 @@ class BottomNav extends React.Component {
 
   render() {
       const { value } = this.state;
-      const { buttonNavLabels } = this.props;
+      const { bottomNavLabels } = this.props;
       return (
           <BottomNavigation
               className="bottomNav"
@@ -26,14 +26,14 @@ class BottomNav extends React.Component {
               showLabels
               value={value}
           >
-              { buttonNavLabels.map((label, index) => <BottomNavigationAction key={index} label={label} />) }
+              { bottomNavLabels.map((label, index) => <BottomNavigationAction key={index} label={label} />) }
           </BottomNavigation>
       );
   }
 }
 
 BottomNav.propTypes = {
-    buttonNavLabels: PropTypes.array.isRequired
+    bottomNavLabels: PropTypes.array.isRequired
 };
 
 export default BottomNav;
