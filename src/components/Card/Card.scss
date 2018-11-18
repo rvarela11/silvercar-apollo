@@ -24,34 +24,34 @@
 }
 
 .location__card:hover .card__city,
-.location__card:hover .card__airport-name {
+.location__card:hover .card__icon-description {
   color: $color__white;
 }
-.location__card:hover .card__airport-icon, {
+.location__card:hover .card__icon-icon, {
   color: $color__white;
   transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 }
 
 .card__city {
   @include typescale(2);
-  color: #454545;
+  color: $color__mid-black;
   font-family: $font-family-sans-serif;
 }
 
-.card__airport {
+.card__icon {
   align-items: center;
   display: flex;
   flex-direction: row;
 }
 
-.card__airport-icon {
-  color: #a3a3a3;
+.card__icon-icon {
+  color: $color__mid-gray;
   padding-right: $spacing-3xs;
 }
 
-.card__airport-name {
+.card__icon-description {
   @include typescale(-2);
-  color: #a3a3a3;
+  color: $color__mid-gray;
   font-family: $font-family-sans-serif;
   overflow: hidden;
   padding: 0;

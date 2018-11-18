@@ -1,7 +1,5 @@
 // @vendors
 import React from 'react';
-
-// @material-ui
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';

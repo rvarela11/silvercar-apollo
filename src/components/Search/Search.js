@@ -1,8 +1,6 @@
 // @vendors
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// @material-ui
 import TextField from '@material-ui/core/TextField';
 
 // @styles
