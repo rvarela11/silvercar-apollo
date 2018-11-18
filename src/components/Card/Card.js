@@ -1,5 +1,6 @@
 // @vendors
 import React from 'react';
+import PropTypes from 'prop-types';
 import { AirplanemodeActive } from '@material-ui/icons';
 
 // @styles
@@ -7,8 +8,6 @@ import './Card.scss';
 
 const Card = (props) => {
     const { item } = props;
-
-    console.log({ item });
     return (
         <div className="location__card" aria-label={item.description} tabIndex="0" role="button">
             <div className="card__city">
@@ -23,5 +22,10 @@ const Card = (props) => {
         </div>
     );
 };
+
+Card.propTypes = {
+    item: PropTypes.object.isRequired
+};
+
 
 export default Card;

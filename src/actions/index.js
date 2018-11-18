@@ -5,3 +5,11 @@ export function getAllData(apiData) {
         payload: apiData
     };
 }
+
+export const SEARCH_INPUT_VALUE = 'SEARCH_INPUT_VALUE';
+export function searchInputValue(value) {
+    return {
+        type: SEARCH_INPUT_VALUE,
+        payload: value
+    };
+}

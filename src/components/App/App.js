@@ -8,7 +8,7 @@ import Header from '../Header/Header';
 import Locations from '../Locations/Locations';
 
 // @actions
-import { getAllData } from '../../actions/index';
+import { getAllData, searchInputValue } from '../../actions/index';
 
 // @styles
 import './App.scss';
@@ -23,18 +23,19 @@ class App extends Component {
     }
 
     render() {
-        const { apiDataAllFiltered } = this.props;
+        const { apiDataAllFiltered, searchInputValue } = this.props;
         return (
             <div className="App">
                 <Header />
-                <Locations data={apiDataAllFiltered} />
+                <Locations data={apiDataAllFiltered} handleOnChangeSearch={value => searchInputValue(value)} />
             </div>
         );
     }
 }
 
 const mapDispatchToProps = dispatch => ({
-    getAllData: apiData => dispatch(getAllData(apiData))
+    getAllData: apiData => dispatch(getAllData(apiData)),
+    searchInputValue: value => dispatch(searchInputValue(value))
 });
 
 const mapStateToProps = state => ({
@@ -43,7 +44,8 @@ const mapStateToProps = state => ({
 
 App.propTypes = {
     apiDataAllFiltered: PropTypes.array.isRequired,
-    getAllData: PropTypes.func.isRequired
+    getAllData: PropTypes.func.isRequired,
+    searchInputValue: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
