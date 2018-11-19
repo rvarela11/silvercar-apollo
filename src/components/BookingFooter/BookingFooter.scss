@@ -38,6 +38,12 @@
   .booking-footer {
     padding: rem(8px);
   }
+  .booking-footer__buttons {
+    display: none;
+  }
+  .booking-footer__texts {
+    justify-content: space-between;
+  }
   .booking-footer__text {
       @include typescale(-1);
   }

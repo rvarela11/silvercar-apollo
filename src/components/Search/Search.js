@@ -14,7 +14,8 @@ const styles = theme => ({
     search__input: {
         width: theme.spacing.unit,
         [theme.breakpoints.down('sm')]: {
-            width: '75%'
+            width: '75%',
+            margin: 0
         },
         [theme.breakpoints.up('md')]: {
             width: '50%'
