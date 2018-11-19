@@ -51,6 +51,9 @@
   .header .header__help-button {
     display: none;
   }
+  .header {
+    padding: 0;
+  }
   .header__logo {
     height: rem(16px);
   }

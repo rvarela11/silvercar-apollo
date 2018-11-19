@@ -1,7 +1,7 @@
 const initialState = {
     apiDataAll: [],
     apiDataAllFiltered: [],
-    bookingFooterNavLabels: ['CITY', 'PICK UP', 'DROP OFF', 'VEHICLE', 'COVERAGE']
+    bookingFooterNavLabels: ['CITY', 'DATES', 'VEHICLE', 'COVERAGE']
 };
 
 export function reducer(state = initialState, action) {
