@@ -11,8 +11,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 // @styles
 import './Header.scss';
 
+// Overriding material-ui classes
 const styles = {
-    headerAppBar: {
+    header__AppBar: {
         boxShadow: 'none'
     }
 };
@@ -21,7 +22,7 @@ const Header = (props) => {
     const { classes } = props;
     return (
         <div className="header">
-            <AppBar className={classes.headerAppBar} color="inherit" position="static">
+            <AppBar className={classes.header__AppBar} color="inherit" position="static">
                 <Toolbar>
                     <IconButton color="inherit" aria-label="Menu">
                         <MenuIcon />

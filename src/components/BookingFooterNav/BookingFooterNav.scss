@@ -4,12 +4,4 @@
 
 .bookingFooterNav {
   width: 100%;
-  // Overriding material-ui classes
-  .MuiBottomNavigation-root-119 {
-    background-color: $color__light-gray;
-  }
-  .MuiBottomNavigationAction-root-120.MuiBottomNavigationAction-selected-121,
-  .MuiBottomNavigationAction-selected-121 {
-    color: $color__sc-blue;
-  }
 }

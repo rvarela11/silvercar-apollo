@@ -1,11 +1,19 @@
 // @vendors
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 // @styles
 import './BookingFooterNav.scss';
+
+// Overriding material-ui classes
+const styles = {
+    root: {
+        backgroundColor: '#f4f4f4'
+    }
+};
 
 class BookingFooterNav extends Component {
   state = {
@@ -18,10 +26,11 @@ class BookingFooterNav extends Component {
 
   render() {
       const { value } = this.state;
-      const { bookingFooterNavLabels } = this.props;
+      const { classes, bookingFooterNavLabels } = this.props;
       return (
           <div className="bookingFooterNav">
               <BottomNavigation
+                  className={classes.root}
                   onChange={this.handleChange}
                   showLabels
                   value={value}
@@ -34,7 +43,8 @@ class BookingFooterNav extends Component {
 }
 
 BookingFooterNav.propTypes = {
-    bookingFooterNavLabels: PropTypes.array.isRequired
+    bookingFooterNavLabels: PropTypes.array.isRequired,
+    classes: PropTypes.object.isRequired
 };
 
-export default BookingFooterNav;
+export default withStyles(styles)(BookingFooterNav);
