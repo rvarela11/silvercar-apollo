@@ -8,9 +8,11 @@ A location section where a user can find their location by city name.
 
 1. React
 2. Redux
+3. SCSS
 
 ### Others
 
-1. Eslint Airbnb
-2. Enzyme
-3. Material UI
+1. Responsive design
+2. Eslint Airbnb
+3. Enzyme
+4. Material UI
