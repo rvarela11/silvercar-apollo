@@ -3,10 +3,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // @components
-import Card from '../Card';
+import BookingFooter from '../BookingFooter';
 
-describe('Card Container', () => {
-    it('renders Card without crashing', () => {
-        shallow(<Card item={{}} />);
+describe('BookingFooter Container', () => {
+    it('renders BookingFooter without crashing', () => {
+        shallow(<BookingFooter />);
     });
 });
