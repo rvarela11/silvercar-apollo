@@ -1,7 +1,6 @@
 // @styles
 @import '../../globals/scss/spacing';
 @import '../../globals/scss/typography';
-@import '../../globals/scss/layout';
 
 .locations__selection {
   display: flex;
@@ -18,29 +17,13 @@
 
 .locations {
   overflow-y: scroll;
+  width: 75%;
+  height: calc(100vh - 190px);
 }
 
-/*---------------- @media grid -------------------*/
-
-// Media query to keep a max of 3 columns
-
-@supports (display: grid) {
-  .locations__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include max-breakpoint('lg') {
-    .locations__list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @include max-breakpoint('md') {
-    .locations__list {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
+.locations__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(275px, 1fr));
 }
 
 // Fallback if the browser does not support css grid
