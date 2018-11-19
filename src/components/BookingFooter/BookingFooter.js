@@ -11,7 +11,8 @@ import './BookingFooter.scss';
 // Overriding material-ui classes
 const styles = {
     bookingFooter__button: {
-        borderRadius: 100
+        borderRadius: 100,
+        padding: '0px 10px'
     },
     bookingFooter__input: {
         margin: 0
@@ -35,7 +36,7 @@ const BookingFooter = (props) => {
                 <h4 className="booking-footer__text"> Estimated Total: </h4>
             </div>
             <div className="booking-footer__buttons">
-                <Button disabled>View Full Breakdown</Button>
+                <Button color="inherit" disabled>Breakdown</Button>
                 <Button className={classes.bookingFooter__button} color="inherit" disabled variant="contained">BOOK NOW</Button>
             </div>
         </div>

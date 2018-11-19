@@ -10,7 +10,7 @@ import './BookingFooterNav.scss';
 
 // Overriding material-ui classes
 const styles = {
-    root: {
+    bookingFooterNav__BottomNavigation: {
         backgroundColor: '#f4f4f4'
     }
 };
@@ -30,7 +30,7 @@ class BookingFooterNav extends Component {
       return (
           <div className="bookingFooterNav">
               <BottomNavigation
-                  className={classes.root}
+                  className={classes.bookingFooterNav__BottomNavigation}
                   onChange={this.handleChange}
                   showLabels
                   value={value}

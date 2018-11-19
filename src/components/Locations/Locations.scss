@@ -42,3 +42,16 @@
     flex-basis: 915px;
   }
 }
+
+/*---------------- @media -------------------*/
+
+@media screen and (max-width: 527px) {
+  .locations {
+    width: 90%;
+    height: 100vh;
+  }
+  .locations__title {
+    @include typescale(0);
+
+  }
+}
