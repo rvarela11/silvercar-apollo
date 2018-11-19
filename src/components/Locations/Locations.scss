@@ -1,6 +1,7 @@
 // @styles
 @import '../../globals/scss/spacing';
 @import '../../globals/scss/typography';
+@import '../../globals/scss/layout';
 
 .locations__selection {
   display: flex;
@@ -9,18 +10,41 @@
 }
 
 .locations__title {
-  @include typescale(4);
+  @include typescale(3);
   font-family: $font-family-sans-serif;
   font-weight: 500;
+  margin: rem(15px) 0;
 }
+
+.locations {
+  overflow-y: scroll;
+}
+
+/*---------------- @media grid -------------------*/
+
+// Media query to keep a max of 3 columns
 
 @supports (display: grid) {
   .locations__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @include max-breakpoint('lg') {
+    .locations__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include max-breakpoint('md') {
+    .locations__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
+// Fallback if the browser does not support css grid
+// https://caniuse.com/#feat=css-grid
 
 @supports not (display: grid) {
   .locations {
@@ -32,6 +56,6 @@
   .locations__list {
     display: flex;
     flex-wrap: wrap;
-    flex: 0 1 1000px;
+    flex-basis: 915px;
   }
 }

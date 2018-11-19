@@ -13,7 +13,7 @@ const Search = (props) => {
             <TextField
                 autoFocus
                 className="search__input"
-                id="standard-with-placeholder"
+                id="search-input"
                 margin="normal"
                 onChange={e => handleOnChangeSearch(e.target.value)}
                 placeholder="Search by city or airport code"

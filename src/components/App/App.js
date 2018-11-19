@@ -23,12 +23,12 @@ class App extends Component {
     }
 
     render() {
-        const { apiDataAllFiltered, bottomNavLabels, searchInputValue } = this.props;
+        const { apiDataAllFiltered, bookingFooterNavLabels, searchInputValue } = this.props;
         return (
             <div className="App">
                 <Header />
                 <Locations
-                    bottomNavLabels={bottomNavLabels}
+                    bookingFooterNavLabels={bookingFooterNavLabels}
                     data={apiDataAllFiltered}
                     handleOnChangeSearch={value => searchInputValue(value)}
                 />
@@ -44,12 +44,12 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
     apiDataAllFiltered: state.apiDataAllFiltered,
-    bottomNavLabels: state.bottomNavLabels
+    bookingFooterNavLabels: state.bookingFooterNavLabels
 });
 
 App.propTypes = {
     apiDataAllFiltered: PropTypes.array.isRequired,
-    bottomNavLabels: PropTypes.array.isRequired,
+    bookingFooterNavLabels: PropTypes.array.isRequired,
     getAllData: PropTypes.func.isRequired,
     searchInputValue: PropTypes.func.isRequired
 };

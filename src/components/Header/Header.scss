@@ -1,11 +1,14 @@
 // @styles
 @import '../../globals/scss/colors';
+@import '../../globals/scss/spacing';
 @import '../../globals/scss/typography';
 
 .header {
     flex-grow: 1;
+    padding: $spacing-sm;
+    border-bottom: 1px solid $color__light-gray;
 
-    // Placing these material-ui classes inside the header class to override
+    // Overriding material-ui classes
     .header__button:hover {
       background-color: transparent;
       color: $color__sc-blue
@@ -17,7 +20,6 @@
       color: $color__light-red;
     }
     .MuiPaper-elevation4-16 {
-      border-bottom: 1px solid $color__light-gray;
       box-shadow: none;
     }
 }
@@ -43,4 +45,13 @@
 .header__button:first-child {
   border-radius: rem(0px);
   border-right: 1px solid $color__black;
+}
+
+/*---------------- @media -------------------*/
+
+@media screen and (max-width: 513px) {
+  .header__buttons,
+  .header .header__help-button {
+    display: none;
+  }
 }

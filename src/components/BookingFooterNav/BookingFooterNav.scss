@@ -1,13 +1,13 @@
 // @styles
 @import '../../globals/scss/colors';
+@import '../../globals/scss/spacing';
 
-.bottomNav {
-  border-top: 1px solid $color__light-gray;
-  bottom:0;
-  position:fixed;
+.bookingFooterNav {
   width: 100%;
-
-  // Placing these material-ui classes inside the header class to override
+  // Overriding material-ui classes
+  .MuiBottomNavigation-root-119 {
+    background-color: $color__light-gray;
+  }
   .MuiBottomNavigationAction-root-120.MuiBottomNavigationAction-selected-121,
   .MuiBottomNavigationAction-selected-121 {
     color: $color__sc-blue;

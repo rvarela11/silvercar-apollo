@@ -1,0 +1,50 @@
+// @styles
+@import '../../globals/scss/colors';
+@import '../../globals/scss/spacing';
+@import '../../globals/scss/typography';
+
+.booking-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(296px, 1fr));
+  align-self: stretch;
+  padding: $spacing-sm;
+
+  // Overriding material-ui class
+  .MuiFormControl-marginNormal-86 {
+    margin: 0;
+  }
+  .MuiButton-colorInherit-80 {
+    color: inherit;
+  }
+  .MuiButton-root-59 {
+    border-radius: rem(100px);
+  }
+}
+
+.booking-footer__inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-footer__texts,
+.booking-footer__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-footer__input {
+  // Overriding material-ui class
+  .MuiInput-underline-93:after {
+    border-bottom: $spacing-4xs solid $color__sc-blue;
+  }
+}
+
+.booking-footer__text {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  margin: 8px;
+}

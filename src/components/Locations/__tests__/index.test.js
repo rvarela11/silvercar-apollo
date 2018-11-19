@@ -9,7 +9,7 @@ describe('Locations Container', () => {
     it('renders Locations without crashing', () => {
         shallow(
             <Locations
-                bottomNavLabels={[]}
+                bookingFooterNavLabels={[]}
                 data={[]}
                 handleOnChangeSearch={() => {}}
             />
