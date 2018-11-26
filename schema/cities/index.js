@@ -39,7 +39,7 @@ const citiesResolver = (parentValue, args) => ax.get('locations.json')
         }
         return apiDataNoQ5NoA5C;
     })
-    .catch(console.log('Error'));
+    .catch(error => console.log('Error', error));
 
 module.exports = {
     CitiesType,
