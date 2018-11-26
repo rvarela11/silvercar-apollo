@@ -7,7 +7,7 @@ A location section where a user can find their location by city name.
 ### Technologies
 
 1. React
-2. Redux
+2. Apollo 2.1
 3. SCSS
 
 ### Others
